@@ -14,14 +14,17 @@ ansible_become=True
 ansible_become_user=root
 #ansible_become_method=su
 ansible_ssh_user=centos
-ansible_ssh_private_key_file=/Users/audrey/git/tamu/aggie-innovation-platform/tf-packer-perfsonar/instances/aws/tf_perfsonar_rsa.pem
+#ansible_ssh_private_key_file=/Users/audrey/git/tamu/aggie-innovation-platform/tf-packer-perfsonar/instances/aws/tf_perfsonar_rsa.pem
+ansible_ssh_private_key_file=~/.ssh/perfsonar/tf_perfsonar_rsa.pem
 
 [ps_testpoint]
 
 [ps_toolkit]
 aws1.perfsonar.cloud.tamu.edu
 aws2.perfsonar.cloud.tamu.edu
-azure1.perfsonar.cloud.tamu.edu ansible_ssh_private_key_file=/Users/audrey/.ssh/perfsonar
+azure1.perfsonar.cloud.tamu.edu ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
+perfsonar-aggiecloud.itio.tamu.edu ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
+#gcp1.perfsonar.cloud.tamu.edu ansible_ssh_user=sa_103820116649512662515 ansible_ssh_private_key_file=./ssh-key-ansible-sa
 
 [ps_archive]
 archive.perfsonar.cloud.tamu.edu
