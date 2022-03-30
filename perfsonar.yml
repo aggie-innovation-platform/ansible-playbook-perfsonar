@@ -31,6 +31,7 @@
     - ps_toolkit
   roles:
     - ansible-role-perfsonar-toolkit
+    - tamu-ansible-role-perfsonar-local-modifications
 
 - name: perfSONAR ps-config-publishers
   tags: 
@@ -47,4 +48,5 @@
     - ps_psconfig_web_admin
   roles:
     - ansible-role-perfsonar-psconfig-web-admin
+    - tamu-ansible-role-perfsonar-local-modifications
 

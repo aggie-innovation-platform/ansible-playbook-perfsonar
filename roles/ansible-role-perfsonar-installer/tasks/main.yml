@@ -19,7 +19,3 @@
     name: "{{ item }}"
     state: latest
   with_items: "{{ perfsonar_optional_packages | default([]) }}"
-
-- name: Modify /etc/perfsonar/toolkit/web/web_admin.conf to allow internal NIC use interfaces with private ip addresses
-  tags: [ 'ps::install' ]
-  lineinfile: dest=/etc/perfsonar/toolkit/web/web_admin.conf regexp='^(.*)allow_internal_addresses  0(.*)' line='allow_internal_addresses  1' state=present backup=yes backrefs=yes

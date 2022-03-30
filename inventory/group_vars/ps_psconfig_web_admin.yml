@@ -34,9 +34,9 @@ perfsonar_pwa_user_purge: False
 #   - fullname
 #   - EITHER email OR perfsonar_pwa_user_default_domain defined
 perfsonar_pwa_user_list:
-#  - username:
-#    fullname:
-#    email:
-#    password:
-#    password_reset: True
-#    scope: ['user', 'admin']
+  - username: soren
+    fullname: Wiliam Deigaard
+    email: soren@tamu.edu
+    password: test1
+    password_reset: True
+    scope: ['user', 'admin']
