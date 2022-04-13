@@ -23,9 +23,10 @@ ansible_ssh_private_key_file=~/.ssh/perfsonar/tf_perfsonar_rsa.pem
 aws1.perfsonar.cloud.tamu.edu
 aws2.perfsonar.cloud.tamu.edu
 #aws3.perfsonar.cloud.tamu.edu
-aws5.perfsonar.cloud.tamu.edu
-# NEED IPv6 enabled -> azure1.perfsonar.cloud.tamu.edu ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
-perfsonar-aggiecloud.itio.tamu.edu ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
+aws3-direct-connect.disregardit.org.github.beta.tailscale.net
+azure1.perfsonar.cloud.tamu.edu ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
+perfsonar-aggiecloud.disregardit.org.github.beta.tailscale.net ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
+#perfsonar-aggiecloud.itio.tamu.edu ansible_ssh_private_key_file=~/.ssh/perfsonar/perfsonar
 # NEED to rebuild -> gcp1.perfsonar.cloud.tamu.edu ansible_ssh_user=sa_103820116649512662515 ansible_ssh_private_key_file=./ssh-key-ansible-sa
 
 [ps_archive]
@@ -37,9 +38,9 @@ maddash.perfsonar.cloud.tamu.edu
 [ps_psconfig_publisher]
 psconfig.perfsonar.cloud.tamu.edu
 
+[ps_psconfig_web_admin]
+#pwa.perfsonar.cloud.tamu.edu
+pwa.perfsonar.cloud.tamu.edu ansible_python_interpreter=/usr/bin/python3
+
 [ps_psconfig_web_admin:vars]
 ansible_python_interpreter=/usr/bin/python3
-
-[ps_psconfig_web_admin]
-pwa.perfsonar.cloud.tamu.edu
-#pwa.perfsonar.cloud.tamu.edu ansible_python_interpreter=/usr/bin/python3

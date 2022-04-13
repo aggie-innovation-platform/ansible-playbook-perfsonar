@@ -1,0 +1,8 @@
+- name: perfSONAR toolkits
+  tags: 
+    - toolkits
+  hosts:
+    - ps_toolkit
+  roles:
+    - tamu-ansible-role-perfsonar-local-modifications
+

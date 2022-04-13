@@ -22,6 +22,7 @@
   hosts:
     - ps_testpoint
   roles:
+    - tamu-ansible-role-perfsonar-local-modifications
     - ansible-role-perfsonar-testpoint
 
 - name: perfSONAR toolkit
